@@ -1,12 +1,14 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {ArticlesListingScreen} from '../modules/Articles';
+import {ArticleDetailScreen, ArticlesListingScreen} from '../modules/Articles';
 import theme from '../theme';
 import {ArticlesListingTitle} from '../constants';
 import {} from 'react-native-gesture-handler';
+import {Article} from '../model/articles/types';
 
 export type ArticleRoutes = {
   Listing: undefined;
+  Detail: {article: Article};
 };
 
 const Stack = createStackNavigator<ArticleRoutes>();
@@ -18,11 +20,10 @@ export default () => (
         backgroundColor: theme.primaryColor,
       },
       headerTintColor: theme.onPrimary,
+      title: ArticlesListingTitle,
+      headerBackTitle: ' ',
     }}>
-    <Stack.Screen
-      component={ArticlesListingScreen}
-      name="Listing"
-      options={() => ({title: ArticlesListingTitle})}
-    />
+    <Stack.Screen component={ArticlesListingScreen} name="Listing" />
+    <Stack.Screen component={ArticleDetailScreen} name="Detail" />
   </Stack.Navigator>
 );

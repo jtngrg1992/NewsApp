@@ -50,8 +50,14 @@ export default () => {
     }
   }, [error]);
 
+  const handleItemPress = useCallback((item: Article) => {
+    navigation.navigate('Detail', {article: item});
+  }, []);
+
   const renderItem = useCallback(
-    ({item}: ListRenderItemInfo<Article>) => <ArticleRow article={item} />,
+    ({item}: ListRenderItemInfo<Article>) => (
+      <ArticleRow article={item} onPress={() => handleItemPress(item)} />
+    ),
     [],
   );
 
