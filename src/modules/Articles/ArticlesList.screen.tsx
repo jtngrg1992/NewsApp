@@ -1,10 +1,10 @@
-import React, {useCallback, useLayoutEffect} from 'react';
+import React, {useCallback, useEffect, useLayoutEffect} from 'react';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {
+  Alert,
   FlatList,
   ListRenderItemInfo,
   RefreshControl,
-  Dimensions,
   View,
 } from 'react-native';
 import {useDispatch} from 'react-redux';
@@ -17,8 +17,8 @@ import {fetchArticles} from '../../model/articles/actions';
 import {Article} from '../../model/articles/types';
 import {ArticleRow, NavigationButton} from './atomic-components';
 import {Images} from '../../images';
+import {ErrorTitle} from '../../constants';
 
-const width = Dimensions.get('screen').width;
 export default () => {
   const dispatch = useDispatch();
   const articles = useArticleList();
@@ -43,6 +43,12 @@ export default () => {
       ),
     });
   }, []);
+
+  useEffect(() => {
+    if (error) {
+      Alert.alert(ErrorTitle, error.message);
+    }
+  }, [error]);
 
   const renderItem = useCallback(
     ({item}: ListRenderItemInfo<Article>) => <ArticleRow article={item} />,
