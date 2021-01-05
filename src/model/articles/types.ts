@@ -1,22 +1,25 @@
 export type ArticleMedia = {
-  thumbnail: string;
-  mediumImage: string;
-  largeImage: string;
+  thumbnail?: string;
+  mediumImage?: string;
+  largeImage?: string;
 };
 
 export type Article = {
   id: number;
+  url: string;
   source: string;
   published: string;
   updated: string;
   author: string;
   title: string;
   abstract: string;
-  media: ArticleMedia;
+  media?: ArticleMedia;
 };
 
 export type ArticlesState = {
   list: Article[];
+  isFetchingArticles: boolean;
+  error?: Error;
 };
 
 export const FETCH_ARTICLES = 'FETCH_ARTICLES';
