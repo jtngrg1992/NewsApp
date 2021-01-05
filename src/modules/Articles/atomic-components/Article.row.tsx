@@ -20,12 +20,14 @@ export const ArticleRow = memo(
     const {media, title, author, source, published} = article;
     return (
       <TouchableOpacity
+        testID="touchable"
         style={[styles.container, StyleSheet.flatten(style)]}
         {...otherProps}>
         <View style={[styles.filler, styles.centralizedRow]}>
           <View style={styles.thumbnailContainer}>
             {media?.thumbnail && (
               <Image
+                testID="article-thumbnail"
                 style={styles.thumbnail}
                 source={{uri: media.thumbnail}}
                 resizeMode="cover"
@@ -33,10 +35,14 @@ export const ArticleRow = memo(
             )}
           </View>
           <View style={styles.filler}>
-            <Text style={styles.title} numberOfLines={2}>
+            <Text testID="article-title" style={styles.title} numberOfLines={2}>
               {title}
             </Text>
-            <Text style={[styles.subtitle, {marginTop: 10}]}>{author}</Text>
+            <Text
+              testID="article-author"
+              style={[styles.subtitle, {marginTop: 10}]}>
+              {author}
+            </Text>
             <View style={[styles.bottomRow, styles.centralizedRow]}>
               <Text style={styles.subtitle}>{source}</Text>
               <View style={styles.filler} />

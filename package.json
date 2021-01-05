@@ -53,7 +53,10 @@
   },
   "jest": {
     "preset": "react-native",
-    "setupTestFrameworkScriptFile": "jest-enzyme",
+    "setupFilesAfterEnv": [
+      "jest-enzyme",
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ],
     "testEnvironment": "enzyme",
     "testEnvironmentOptions": {
       "enzymeAdapter": "react16"
