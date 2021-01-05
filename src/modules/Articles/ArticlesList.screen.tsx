@@ -1,11 +1,11 @@
+import React, {useCallback} from 'react';
 import {useFocusEffect} from '@react-navigation/native';
-import React, {useCallback, useEffect} from 'react';
 import {
-  View,
-  Text,
   FlatList,
   ListRenderItemInfo,
   RefreshControl,
+  Dimensions,
+  View,
 } from 'react-native';
 import {useDispatch} from 'react-redux';
 import {
@@ -17,9 +17,9 @@ import {fetchArticles} from '../../model/articles/actions';
 import {Article} from '../../model/articles/types';
 import {ArticleRow} from './atomic-components';
 
+const width = Dimensions.get('screen').width;
 export default () => {
   const dispatch = useDispatch();
-
   const articles = useArticleList();
   const isFetching = useIsFetchingArticles();
   const error = useArticlesFetchError();

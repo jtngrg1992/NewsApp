@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   TouchableOpacityProps,
 } from 'react-native';
-import {abs} from 'react-native-reanimated';
+import {Images} from '../../../images';
 import {Article} from '../../../model/articles/types';
 import theme from '../../../theme';
 
@@ -22,7 +22,7 @@ export const ArticleRow = memo(
       <TouchableOpacity
         style={[styles.container, StyleSheet.flatten(style)]}
         {...otherProps}>
-        <View style={styles.innerContainer}>
+        <View style={[styles.filler, styles.centralizedRow]}>
           <View style={styles.thumbnailContainer}>
             {media?.thumbnail && (
               <Image
@@ -32,13 +32,22 @@ export const ArticleRow = memo(
               />
             )}
           </View>
-          <View>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.subtitle}>{author}</Text>
-            <View>
+          <View style={styles.filler}>
+            <Text style={styles.title} numberOfLines={2}>
+              {title}
+            </Text>
+            <Text style={[styles.subtitle, {marginTop: 10}]}>{author}</Text>
+            <View style={[styles.bottomRow, styles.centralizedRow]}>
               <Text style={styles.subtitle}>{source}</Text>
-              <Text style={styles.subtitle}>{published}</Text>
+              <View style={styles.filler} />
+              <View style={styles.centralizedRow}>
+                <Image style={styles.calendarIcon} source={Images.calendar} />
+                <Text style={styles.subtitle}>{published}</Text>
+              </View>
             </View>
+          </View>
+          <View>
+            <Image source={Images.next} style={styles.nextIcon} />
           </View>
         </View>
       </TouchableOpacity>
@@ -47,13 +56,16 @@ export const ArticleRow = memo(
 );
 
 const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-  },
-  innerContainer: {
+  centralizedRow: {
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  container: {
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+  },
+  filler: {
+    flex: 1,
   },
   thumbnailContainer: {
     height: 60,
@@ -61,7 +73,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     overflow: 'hidden',
     backgroundColor: theme.secondaryColor,
-    marginRight: 20,
+    marginRight: 15,
   },
   thumbnail: {
     flex: 1,
@@ -73,5 +85,20 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 15,
     color: theme.onBackgroundLight,
+  },
+  bottomRow: {
+    marginTop: 5,
+  },
+  calendarIcon: {
+    height: 15,
+    width: 15,
+    tintColor: theme.onBackgroundLight,
+    marginRight: 6,
+  },
+  nextIcon: {
+    tintColor: theme.onBackgroundLight,
+    height: 15,
+    width: 15,
+    marginLeft: 15,
   },
 });
