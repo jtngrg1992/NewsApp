@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {ArticlesListingScreen} from '../modules/Articles';
 import theme from '../theme';
 import {ArticlesListingTitle} from '../constants';
+import {} from 'react-native-gesture-handler';
 
 export type ArticleRoutes = {
   Listing: undefined;
