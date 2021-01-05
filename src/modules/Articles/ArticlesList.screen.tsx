@@ -13,8 +13,7 @@ import {
   useArticlesFetchError,
   useIsFetchingArticles,
 } from '../../hooks';
-import {fetchArticles} from '../../model/articles/actions';
-import {Article} from '../../model/articles/types';
+import {fetchArticles, Article} from '../../model/articles';
 import {ArticleRow, NavigationButton} from './atomic-components';
 import {Images} from '../../images';
 import {ErrorTitle} from '../../constants';

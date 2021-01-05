@@ -1,7 +1,7 @@
 import {
   ArticlesState,
   ArticlesActionTypes,
-  FETCH_ARTICLES_PENDING,
+  FETCH_ARTICLES,
   FETCH_ARTICLES_SUCCESS,
   FETCH_ARTICLES_FAILURE,
 } from './types';
@@ -16,7 +16,7 @@ export default (
   action: ArticlesActionTypes,
 ): ArticlesState => {
   switch (action.type) {
-    case FETCH_ARTICLES_PENDING:
+    case FETCH_ARTICLES:
       return {
         ...state,
         isFetchingArticles: true,

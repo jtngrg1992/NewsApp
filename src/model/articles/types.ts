@@ -25,14 +25,9 @@ export type ArticlesState = {
 export const FETCH_ARTICLES = 'FETCH_ARTICLES';
 export const FETCH_ARTICLES_SUCCESS = 'FETCH_ARTICLES_SUCCESS';
 export const FETCH_ARTICLES_FAILURE = 'FETCH_ARTICLES_FAILURE';
-export const FETCH_ARTICLES_PENDING = 'FETCH_ARTICLES_PENDING';
 
 export type FetchArticlesAction = {
   type: typeof FETCH_ARTICLES;
-};
-
-export type FetchArticlesPendingAction = {
-  type: typeof FETCH_ARTICLES_PENDING;
 };
 
 export type FetchArticlesSuccessAction = {
@@ -48,5 +43,4 @@ export type FetchArticlesFailureAction = {
 export type ArticlesActionTypes =
   | FetchArticlesAction
   | FetchArticlesSuccessAction
-  | FetchArticlesFailureAction
-  | FetchArticlesPendingAction;
+  | FetchArticlesFailureAction;

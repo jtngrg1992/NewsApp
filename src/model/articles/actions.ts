@@ -1,10 +1,8 @@
 import {
   FetchArticlesAction,
   FETCH_ARTICLES,
-  FETCH_ARTICLES_PENDING,
   FETCH_ARTICLES_SUCCESS,
   FETCH_ARTICLES_FAILURE,
-  FetchArticlesPendingAction,
   FetchArticlesFailureAction,
   FetchArticlesSuccessAction,
   Article,
@@ -12,10 +10,6 @@ import {
 
 export const fetchArticles = (): FetchArticlesAction => ({
   type: FETCH_ARTICLES,
-});
-
-export const fetchArticlesPending = (): FetchArticlesPendingAction => ({
-  type: FETCH_ARTICLES_PENDING,
 });
 
 export const fetchArticlesSuccess = (

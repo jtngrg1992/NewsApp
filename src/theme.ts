@@ -1,5 +1,3 @@
-import {Theme} from './types';
-
 export default {
   primaryColor: '#48e4c2',
   secondaryColor: '#9a9a9a',

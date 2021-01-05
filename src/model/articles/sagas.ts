@@ -1,9 +1,5 @@
 import {takeEvery, call, put} from 'redux-saga/effects';
-import {
-  fetchArticlesSuccess,
-  fetchArticlesFailure,
-  fetchArticlesPending,
-} from './actions';
+import {fetchArticlesSuccess, fetchArticlesFailure} from './actions';
 import {FETCH_ARTICLES, Article, ArticleMedia} from './types';
 
 const processJSON = (articleJSON: any[]): Article[] => {
@@ -62,7 +58,6 @@ const processJSON = (articleJSON: any[]): Article[] => {
 
 function* fetchArticles() {
   try {
-    yield put(fetchArticlesPending());
     const response = yield call(
       fetch,
       'https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key=WvQCGKUDhY2YSxG5K4hS2bgKC0eD52Og',
