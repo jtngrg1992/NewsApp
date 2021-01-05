@@ -15,7 +15,8 @@ import {
 } from '../../hooks';
 import {fetchArticles} from '../../model/articles/actions';
 import {Article} from '../../model/articles/types';
-import {ArticleRow, MenuButton} from './atomic-components';
+import {ArticleRow, NavigationButton} from './atomic-components';
+import {Images} from '../../images';
 
 const width = Dimensions.get('screen').width;
 export default () => {
@@ -33,7 +34,13 @@ export default () => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerLeft: () => <MenuButton />,
+      headerLeft: () => <NavigationButton image={Images.menu} />,
+      headerRight: () => (
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <NavigationButton image={Images.search} />
+          <NavigationButton image={Images.more} />
+        </View>
+      ),
     });
   }, []);
 
