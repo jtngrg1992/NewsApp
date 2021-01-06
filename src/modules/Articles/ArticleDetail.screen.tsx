@@ -17,6 +17,7 @@ export default ({route}: {route: DetailScreenRouteProp}) => {
       <View style={styles.imageContainer}>
         {media?.largeImage && (
           <Image
+            testID="article-large-image"
             style={styles.articleImage}
             source={{uri: media.largeImage}}
             resizeMode="cover"
@@ -24,17 +25,25 @@ export default ({route}: {route: DetailScreenRouteProp}) => {
         )}
       </View>
       <View style={styles.detailContainer}>
-        <Text style={styles.title}>{title}</Text>
+        <Text testID="article-title" style={styles.title}>
+          {title}
+        </Text>
         <View style={[styles.row, {marginTop: 10}]}>
           <View style={styles.spacer}>
-            <Text style={styles.infoText}>{author}</Text>
+            <Text testID="article-author" style={styles.infoText}>
+              {author}
+            </Text>
           </View>
           <View style={[styles.row, {flex: 1, justifyContent: 'flex-end'}]}>
             <Image style={styles.calendarIcon} source={Images.calendar} />
-            <Text style={styles.infoText}>{published} </Text>
+            <Text testID="article-date" style={styles.infoText}>
+              {published}
+            </Text>
           </View>
         </View>
-        <Text style={styles.abstract}>{abstract}</Text>
+        <Text testID="article-abstract" style={styles.abstract}>
+          {abstract}
+        </Text>
       </View>
     </ScrollView>
   );

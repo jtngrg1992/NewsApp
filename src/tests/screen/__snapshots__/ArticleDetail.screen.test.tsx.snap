@@ -22,7 +22,22 @@ exports[`unit/snapshot tests for ArticleDetailScreen should render correctly 1`]
         "width": "100%",
       }
     }
-  />
+  >
+    <Image
+      resizeMode="cover"
+      source={
+        Object {
+          "uri": "some.other.url",
+        }
+      }
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      testID="article-large-image"
+    />
+  </View>
   <View
     style={
       Object {
@@ -39,6 +54,7 @@ exports[`unit/snapshot tests for ArticleDetailScreen should render correctly 1`]
           "fontWeight": "bold",
         }
       }
+      testID="article-title"
     >
       Mock title
     </Text>
@@ -70,6 +86,7 @@ exports[`unit/snapshot tests for ArticleDetailScreen should render correctly 1`]
               "fontSize": 14,
             }
           }
+          testID="article-author"
         >
           Mock Author
         </Text>
@@ -111,9 +128,9 @@ exports[`unit/snapshot tests for ArticleDetailScreen should render correctly 1`]
               "fontSize": 14,
             }
           }
+          testID="article-date"
         >
           2021-01-05
-           
         </Text>
       </View>
     </View>
@@ -126,6 +143,7 @@ exports[`unit/snapshot tests for ArticleDetailScreen should render correctly 1`]
           "marginTop": 15,
         }
       }
+      testID="article-abstract"
     >
       Mock Abstract
     </Text>

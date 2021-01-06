@@ -11,6 +11,7 @@ const mockArticles: Article[] = [
     url: 'mock url',
     media: {
       thumbnail: 'some.url',
+      largeImage: 'some.other.url',
     },
   },
   {
