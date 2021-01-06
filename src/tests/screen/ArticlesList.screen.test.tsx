@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow, ShallowWrapper} from 'enzyme';
 import ArticlesListScreen from '../../modules/Articles/ArticlesList.screen';
-import {fetchArticles} from '../../model/articles';
-import {testID} from '../utils';
+import {Article, fetchArticles} from '../../model/articles';
 import mockArticles from '../test-data/articles';
-import {FlatListProps} from 'react-native';
+import {FlatListProps, ListRenderItem} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 jest.mock('../../hooks', () => ({
   useArticleList: () => mockArticles,
@@ -43,13 +43,32 @@ describe('unit/snapshot tests for ArticlesListScreen', () => {
   });
 
   it('should render all the articles that are present in the state', () => {
-    const rowTestIDs = mockArticles.map((item) => `article-row-${item.id}`);
-    rowTestIDs.forEach((item) => {
-      expect(wrapper.findWhere(testID(item))).toBeDefined();
-    });
+    expect((wrapper.props() as FlatListProps<any>).data?.length).toBe(
+      mockArticles.length,
+    );
   });
 
   it('should appear refreshing if the articles are being fetched', () => {
     expect((wrapper.props() as FlatListProps<any>).refreshing).toBeTruthy();
+  });
+
+  it('should navigate to detail screen if an article is tapped upon', () => {
+    const props = wrapper.props() as FlatListProps<any>;
+    const renderItem: ListRenderItem<Article> | null | undefined =
+      props.renderItem;
+    const row =
+      renderItem &&
+      renderItem({
+        item: mockArticles[0],
+        index: 0,
+        separators: {
+          highlight: () => {},
+          unhighlight: () => {},
+          updateProps: () => {},
+        },
+      });
+    const spy = jest.spyOn(useNavigation(), 'navigate');
+    row?.props.onPress();
+    expect(spy).toHaveBeenCalledWith('Detail', {article: mockArticles[0]});
   });
 });

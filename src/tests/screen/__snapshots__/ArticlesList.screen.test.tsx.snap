@@ -9,6 +9,7 @@ exports[`unit/snapshot tests for ArticlesListScreen should render correctly 1`] 
         "author": "Mock Author",
         "id": 0,
         "media": Object {
+          "largeImage": "some.other.url",
           "thumbnail": "some.url",
         },
         "published": "2021-01-05",
