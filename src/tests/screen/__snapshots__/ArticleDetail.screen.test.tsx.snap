@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit/snapshot tests for ArticleDetailScreen should render correctly 1`] = `
+<ScrollView
+  stickyHeaderIndices={
+    Array [
+      0,
+    ]
+  }
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#9a9a9a",
+        "height": 220,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 15,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Mock title
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          Object {
+            "marginTop": 10,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#808080",
+              "flexWrap": "wrap",
+              "fontSize": 14,
+            }
+          }
+        >
+          Mock Author
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+            Object {
+              "flex": 1,
+              "justifyContent": "flex-end",
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "testUri": "../../../src/assets/images/calendar.png",
+            }
+          }
+          style={
+            Object {
+              "height": 20,
+              "marginRight": 10,
+              "tintColor": "#808080",
+              "width": 20,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#808080",
+              "flexWrap": "wrap",
+              "fontSize": 14,
+            }
+          }
+        >
+          2021-01-05
+           
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#808080",
+          "fontSize": 17,
+          "fontWeight": "500",
+          "marginTop": 15,
+        }
+      }
+    >
+      Mock Abstract
+    </Text>
+  </View>
+</ScrollView>
+`;

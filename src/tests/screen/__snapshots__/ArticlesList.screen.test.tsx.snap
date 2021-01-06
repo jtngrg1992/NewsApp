@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit/snapshot tests for ArticlesListScreen should render correctly 1`] = `
+<FlatList
+  data={
+    Array [
+      Object {
+        "abstract": "Mock Abstract",
+        "author": "Mock Author",
+        "id": 0,
+        "media": Object {
+          "thumbnail": "some.url",
+        },
+        "published": "2021-01-05",
+        "source": "Mock source",
+        "title": "Mock title",
+        "updated": "2021-01-05",
+        "url": "mock url",
+      },
+      Object {
+        "abstract": "Mock Abstract2",
+        "author": "Mock Author",
+        "id": 1,
+        "media": Object {
+          "thumbnail": "some.url",
+        },
+        "published": "2021-01-05",
+        "source": "Mock source",
+        "title": "Mock title2",
+        "updated": "2021-01-05",
+        "url": "mock url",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onEndReachedThreshold={2}
+  refreshControl={
+    <RefreshControlMock
+      refreshing={true}
+    />
+  }
+  refreshing={true}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+  updateCellsBatchingPeriod={50}
+  windowSize={21}
+/>
+`;

@@ -44,6 +44,7 @@ export default () => {
   }, []);
 
   useEffect(() => {
+    console.log(error);
     if (error) {
       Alert.alert(ErrorTitle, error.message);
     }
@@ -55,7 +56,11 @@ export default () => {
 
   const renderItem = useCallback(
     ({item}: ListRenderItemInfo<Article>) => (
-      <ArticleRow article={item} onPress={() => handleItemPress(item)} />
+      <ArticleRow
+        testID={`article-row-${item.id}`}
+        article={item}
+        onPress={() => handleItemPress(item)}
+      />
     ),
     [],
   );

@@ -2,25 +2,14 @@ import React from 'react';
 import {shallow, ShallowWrapper} from 'enzyme';
 import {ArticleRow, ArticleRowProps} from '../../modules/Articles';
 import {testID} from '../utils';
+import mockArticles from '../test-data/articles';
 
 describe('unit/snapshot tests for ArticleRow', () => {
   let wrapper: ShallowWrapper;
 
   const mockProps: ArticleRowProps = {
     onPress: jest.fn(),
-    article: {
-      id: 0,
-      title: 'Mock title',
-      abstract: 'Mock Abstract',
-      author: 'Mock Author',
-      published: '2021-01-05',
-      source: 'Mock source',
-      updated: '2021-01-05',
-      url: 'mock url',
-      media: {
-        thumbnail: 'some.url',
-      },
-    },
+    article: mockArticles[0],
   };
 
   beforeEach(() => (wrapper = shallow(<ArticleRow {...mockProps} />)));
