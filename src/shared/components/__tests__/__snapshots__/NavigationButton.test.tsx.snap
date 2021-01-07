@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit tests for NavigationButton should render correctly 1`] = `
+<ForwardRef
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 10,
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../src/assets/images/calendar.png",
+      }
+    }
+    style={
+      Object {
+        "tintColor": "#fff",
+        "width": 20,
+      }
+    }
+  />
+</ForwardRef>
+`;
