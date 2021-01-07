@@ -57,7 +57,7 @@
     "setupFilesAfterEnv": [
       "jest-enzyme",
       "./node_modules/react-native-gesture-handler/jestSetup.js",
-      "./src/tests/setup.ts"
+      "./src/test-setup/setup.ts"
     ],
     "testEnvironment": "enzyme",
     "testEnvironmentOptions": {

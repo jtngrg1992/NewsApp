@@ -1,8 +1,8 @@
 import React from 'react';
 import {shallow, ShallowWrapper} from 'enzyme';
-import {ArticleRow, ArticleRowProps} from '@news/modules/Articles';
-import {testID} from '../utils';
-import mockArticles from '../test-data/articles';
+import {testID} from '@news/test-setup/utils';
+import mockArticles from '@news/model/articles/mock-data';
+import {ArticleRow, ArticleRowProps} from '../Article.row';
 
 describe('unit/snapshot tests for ArticleRow', () => {
   let wrapper: ShallowWrapper;

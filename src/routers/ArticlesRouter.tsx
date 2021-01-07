@@ -1,8 +1,8 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {ArticleDetailScreen, ArticlesListingScreen} from '../modules/Articles';
-import theme from '../theme';
-import {ArticlesListingTitle} from '../constants';
+import {ArticleDetailScreen, ArticlesListingScreen} from '@news/screens';
+import theme from '../utils/theme';
+import {ArticlesListingTitle} from '../utils/constants';
 import {Article} from '../model/articles';
 
 export type ArticleRoutes = {

@@ -14,9 +14,10 @@ import {
   useIsFetchingArticles,
 } from '@news/hooks';
 import {fetchArticles, Article} from '@news/model/articles';
-import {ErrorTitle} from '@news/constants';
-import {Images} from '@news/images';
-import {ArticleRow, NavigationButton} from './atomic-components';
+import {ErrorTitle} from '@news/utils/constants';
+import {Images} from '@news/utils/images';
+import {ArticleRow} from './components';
+import {NavigationButton} from '@news/shared/components';
 
 export default () => {
   const dispatch = useDispatch();

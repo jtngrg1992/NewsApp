@@ -1,12 +1,12 @@
 import React from 'react';
 import {shallow, ShallowWrapper} from 'enzyme';
-import ArticlesListScreen from '@news/modules/Articles/ArticlesList.screen';
+import ArticlesListScreen from '@news/screens/ArticleListing/ArticlesList.screen';
 import {Article, fetchArticles} from '@news/model/articles';
-import mockArticles from '../test-data/articles';
+import mockArticles from '../../../model/articles/mock-data';
 import {FlatListProps, ListRenderItem} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-jest.mock('../../hooks', () => ({
+jest.mock('@news/hooks', () => ({
   useArticleList: () => mockArticles,
   useIsFetchingArticles: () => true,
   useArticlesFetchError: () => new Error('Mock Error'),

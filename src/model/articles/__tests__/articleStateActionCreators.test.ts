@@ -6,7 +6,7 @@ import {
   FETCH_ARTICLES_FAILURE,
   FETCH_ARTICLES_SUCCESS,
 } from '@news/model/articles';
-import mockArticles from '@news/tests/test-data/articles';
+import mockArticles from '@news/model/articles/mock-data';
 
 describe('unit tests for action creators written for article state', () => {
   it('should create FETCH_ARTICLES when fetching articles', () => {
