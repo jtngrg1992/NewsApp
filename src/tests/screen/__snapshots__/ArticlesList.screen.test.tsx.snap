@@ -10,6 +10,7 @@ exports[`unit/snapshot tests for ArticlesListScreen should render correctly 1`] 
         "id": 0,
         "media": Object {
           "largeImage": "some.other.url",
+          "mediumImage": undefined,
           "thumbnail": "some.url",
         },
         "published": "2021-01-05",
