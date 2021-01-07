@@ -5,8 +5,8 @@ Supported platforms and **android** and **iOS**.
 
 ## ScreenShots
 
-- ![Listing Screen](/screenshots/ss1.png | width=100)
-- ![detail screen](/screenshots/ss2.png | width=100 )
+ <img src="./screenshots/ss1.png" width="40%">
+ <img src="./screenshots/ss2.png" width="40%">
 
 ## Installation Instructions
 
