@@ -6,7 +6,7 @@ import {
   ImageSourcePropType,
   TouchableOpacityProps,
 } from 'react-native';
-import theme from '../../../theme';
+import theme from '@news/theme';
 
 export type NavigationButtonProps = {
   image: ImageSourcePropType;

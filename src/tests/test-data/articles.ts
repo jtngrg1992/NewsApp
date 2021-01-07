@@ -1,4 +1,4 @@
-import {Article} from './../../model/articles/types';
+import {Article} from '@news/model/articles/types';
 
 // following is the mock article array cleanup and pre-typecasted
 const mockArticles: Article[] = [

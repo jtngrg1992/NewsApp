@@ -3,9 +3,9 @@ import {
   fetchArticles,
   fetchArticlesFailure,
   fetchArticlesSuccess,
-} from './../../../model/articles';
-import articlesReducer from './../../../model/articles/reducer';
-import mockArticles from '../../test-data/articles';
+} from '@news/model/articles';
+import articlesReducer from '@news/model/articles/reducer';
+import mockArticles from '@news/tests/test-data/articles';
 
 describe('unit tests for articlesReducer', () => {
   const initialState: ArticlesState = {

@@ -7,9 +7,9 @@ import {
   TouchableOpacity,
   TouchableOpacityProps,
 } from 'react-native';
-import {Images} from '../../../images';
-import {Article} from '../../../model/articles';
-import theme from '../../../theme';
+import {Images} from '@news/images';
+import {Article} from '@news/model/articles';
+import theme from '@news/theme';
 
 export type ArticleRowProps = {
   article: Article;

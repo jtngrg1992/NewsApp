@@ -1,9 +1,9 @@
 import {RouteProp} from '@react-navigation/native';
 import React, {useMemo} from 'react';
 import {View, StyleSheet, Image, Text, ScrollView} from 'react-native';
-import {Images} from '../../images';
-import {ArticleRoutes} from '../../routers/ArticlesRouter';
-import theme from '../../theme';
+import {Images} from '@news/images';
+import {ArticleRoutes} from '@news/routers/ArticlesRouter';
+import theme from '@news/theme';
 
 type DetailScreenRouteProp = RouteProp<ArticleRoutes, 'Detail'>;
 

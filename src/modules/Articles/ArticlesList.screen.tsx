@@ -12,11 +12,11 @@ import {
   useArticleList,
   useArticlesFetchError,
   useIsFetchingArticles,
-} from '../../hooks';
-import {fetchArticles, Article} from '../../model/articles';
+} from '@news/hooks';
+import {fetchArticles, Article} from '@news/model/articles';
+import {ErrorTitle} from '@news/constants';
+import {Images} from '@news/images';
 import {ArticleRow, NavigationButton} from './atomic-components';
-import {Images} from '../../images';
-import {ErrorTitle} from '../../constants';
 
 export default () => {
   const dispatch = useDispatch();

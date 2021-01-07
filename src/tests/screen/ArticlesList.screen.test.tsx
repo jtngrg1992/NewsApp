@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, ShallowWrapper} from 'enzyme';
-import ArticlesListScreen from '../../modules/Articles/ArticlesList.screen';
-import {Article, fetchArticles} from '../../model/articles';
+import ArticlesListScreen from '@news/modules/Articles/ArticlesList.screen';
+import {Article, fetchArticles} from '@news/model/articles';
 import mockArticles from '../test-data/articles';
 import {FlatListProps, ListRenderItem} from 'react-native';
 import {useNavigation} from '@react-navigation/native';

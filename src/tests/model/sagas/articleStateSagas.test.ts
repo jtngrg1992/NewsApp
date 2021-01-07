@@ -6,9 +6,9 @@ import {
   fetchArticlesSuccess,
   FETCH_ARTICLES,
   getArticles,
-} from '../../../model/articles';
-import watchFetchArticles from '../../../model/articles/sagas';
-import mockArticles, {mockArticleJSON} from '../../test-data/articles';
+} from '@news/model/articles';
+import watchFetchArticles from '@news/model/articles/sagas';
+import mockArticles, {mockArticleJSON} from '@news/tests/test-data/articles';
 
 describe('unit tests for getArticles generator function', () => {
   global.fetch = jest.fn().mockReturnValue({});

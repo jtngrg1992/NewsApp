@@ -1,5 +1,5 @@
-import {RootState} from '../model/store';
 import {useSelector} from 'react-redux';
+import {RootState} from '@news/model/store';
 
 export const useArticleList = () =>
   useSelector((state: RootState) => state.articles.list);

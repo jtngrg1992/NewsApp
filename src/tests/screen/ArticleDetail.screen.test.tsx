@@ -1,6 +1,6 @@
 import {shallow, ShallowWrapper} from 'enzyme';
 import React from 'react';
-import {ArticleDetailScreen} from '../../modules/Articles';
+import {ArticleDetailScreen} from '@news/modules/Articles';
 import mockArticles from '../test-data/articles';
 import {testID} from '../utils';
 

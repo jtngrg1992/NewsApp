@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow, ShallowWrapper} from 'enzyme';
-import {ArticleRow, ArticleRowProps} from '../../modules/Articles';
+import {ArticleRow, ArticleRowProps} from '@news/modules/Articles';
 import {testID} from '../utils';
 import mockArticles from '../test-data/articles';
 
