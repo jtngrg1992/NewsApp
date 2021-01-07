@@ -2,6 +2,7 @@
 
 exports[`unit tests for NavigationButton should render correctly 1`] = `
 <ForwardRef
+  onPress={[MockFunction]}
   style={
     Array [
       Object {

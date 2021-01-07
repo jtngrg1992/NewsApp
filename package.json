@@ -70,6 +70,22 @@
       "jsx",
       "json",
       "node"
+    ],
+    "coverageReporters": [
+      "text",
+      "html"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/.node/",
+      "/jest/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx,js,jsx}",
+      "!src/**/*/index.{ts,js}",
+      "!src/hooks/*",
+      "!src/routers/*",
+      "!src/model/store.ts"
     ]
   }
 }
