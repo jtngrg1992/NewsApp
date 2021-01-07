@@ -25,6 +25,10 @@ Supported platforms and **android** and **iOS**.
 1. To run tests, simply run `yarn test` in project directory.
    Doing so will run all unit tests and will also create a coverage report that can be viewed by opening `coverage/index.html` in your browser of choice.
 
+## Coverage report
+
+<img src="./screenshots/coverage.png" width="50%">
+
 ## Questions?
 
 feel free to connect with me on jtngrg1992@hotmail.com or call me on +91-9999464303
