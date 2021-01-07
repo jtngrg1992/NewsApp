@@ -27,7 +27,7 @@ Supported platforms and **android** and **iOS**.
 
 ## Coverage report
 
-<img src="./screenshots/coverage.png" width="50%">
+<img src="./screenshots/coverage.png">
 
 ## Questions?
 
