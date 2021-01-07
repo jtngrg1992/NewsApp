@@ -1,10 +1,13 @@
-import {call, put} from 'redux-saga/effects';
+import {call, put, takeEvery} from 'redux-saga/effects';
 import {
   ARTICLE_URL,
+  fetchArticles,
   fetchArticlesFailure,
   fetchArticlesSuccess,
+  FETCH_ARTICLES,
   getArticles,
 } from '../../../model/articles';
+import watchFetchArticles from '../../../model/articles/sagas';
 import mockArticles, {mockArticleJSON} from '../../test-data/articles';
 
 describe('unit tests for getArticles generator function', () => {
@@ -41,5 +44,16 @@ describe('unit tests for getArticles generator function', () => {
     expect(value2).toEqual(put(fetchArticlesFailure(mockError)));
 
     expect(generator.next().done).toBeTruthy();
+  });
+});
+
+describe('unit tests for fetchArticles watcher saga', () => {
+  it('should dispatch call `getArticles` generator once `fetchArticles` action is encountered', () => {
+    const generator = watchFetchArticles();
+
+    put(fetchArticles());
+    expect(generator.next().value).toEqual(
+      takeEvery(FETCH_ARTICLES, getArticles),
+    );
   });
 });
