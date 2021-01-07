@@ -5,8 +5,8 @@ Supported platforms and **android** and **iOS**.
 
 ## ScreenShots
 
-- ![Listing Screen](/screenshots/ss1.png?raw=true)
-- ![detail screen](/screenshots/ss2.png?raw=true)
+- ![Listing Screen](/screenshots/ss1.png | width=100)
+- ![detail screen](/screenshots/ss2.png | width=100 )
 
 ## Installation Instructions
 
