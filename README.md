@@ -5,6 +5,9 @@ Supported platforms and **android** and **iOS**.
 
 ## ScreenShots
 
+- ![Listing Screen](/screenshots/ss1.png?raw=true)
+- ![detail screen](/screenshots/ss2.png?raw=true)
+
 ## Installation Instructions
 
 1. clone this repo.
@@ -16,3 +19,12 @@ Supported platforms and **android** and **iOS**.
 - run `yarn ios`.
 
 5. To run on android, run `yarn android`. Make sure that an android device is connected in usb debugging mode.
+
+## Testing
+
+1. To run tests, simply run `yarn test` in project directory.
+   Doing so will run all unit tests and will also create a coverage report that can be viewed by opening `coverage/index.html` in your browser of choice.
+
+## Questions?
+
+feel free to connect with me on jtngrg1992@hotmail.com or call me on +91-9999464303
